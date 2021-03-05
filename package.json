@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest"
   },
-  "author": "Chenxi Gu",
+  "author": "gcx3829",
   "license": "ISC",
   "dependencies": {
     "react-native": "^0.63.4",
