@@ -11,7 +11,7 @@ import {
   FramePaymentMethodChangedEvent,
   FrameCardValidationChangedEvent,
 } from './types/types';
-import { CDN } from './config/config';
+import { CDN, frameEvents } from './config/config';
 
 export const Frames = ({
   config,
@@ -29,18 +29,6 @@ export const Frames = ({
   containerStyle,
   children,
 }: FramesProps): React.ReactElement => {
-  const frameEvents = {
-    CARD_TOKENIZATION_FAILED: 'cardTokenizationFailed',
-    CARD_TOKENIZED: 'cardTokenized',
-    CARD_SUBMITTED: 'cardSubmitted',
-    CARD_VALIDATION_CHANGED: 'cardValidationChanged',
-    FRAME_ACTIVATED: 'frameActivated',
-    FRAME_BLUR: 'frameBlur',
-    FRAME_FOCUS: 'frameFocus',
-    FRAME_VALIDATION_CHANGED: 'frameValidationChanged',
-    PAYMENT_METHOD_CHANGED: 'paymentMethodChanged',
-    READY: 'ready',
-  };
   // Ref of webview element.
   let webview: any;
 
