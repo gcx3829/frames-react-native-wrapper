@@ -1,0 +1,62 @@
+{
+  "name": "frames-react-native",
+  "version": "1.0.0",
+  "description": "React Native wrapper of Checkout.com Frames.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Chenxi Gu",
+  "license": "ISC",
+  "dependencies": {
+    "react-native": "^0.63.4",
+    "react-native-webview": "^11.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-native": "^0.63.50",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.2.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "parser": "typescript"
+  }
+}
