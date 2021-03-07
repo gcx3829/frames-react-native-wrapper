@@ -1,8 +1,8 @@
 {
   "name": "frames-react-native-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native wrapper of Checkout.com Frames.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "jest"
   },

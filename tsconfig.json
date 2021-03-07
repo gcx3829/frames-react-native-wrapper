@@ -21,6 +21,6 @@
       "noUnusedLocals": true,
       "declaration": true
   },
-  "include": ["src", "index.js"],
+  "include": ["src", "index.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
