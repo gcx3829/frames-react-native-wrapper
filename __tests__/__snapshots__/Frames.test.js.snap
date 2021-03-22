@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Frames /> should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 50,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RNCWebView
+      cacheEnabled={true}
+      injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+      injectedJavaScriptForMainFrameOnly={true}
+      javaScriptEnabled={true}
+      messagingEnabled={true}
+      mixedContentMode="compatibility"
+      onContentProcessDidTerminate={[Function]}
+      onHttpError={[Function]}
+      onLoadingError={[Function]}
+      onLoadingFinish={[Function]}
+      onLoadingProgress={[Function]}
+      onLoadingStart={[Function]}
+      onMessage={[Function]}
+      onShouldStartLoadWithRequest={[Function]}
+      source={
+        Object {
+          "html": "<!DOCTYPE html>
+    <html lang=\\"en\\">
+      <head>
+        <script src=\\"https://cdn.checkout.com/js/framesv2.min.js\\"></script>
+        <meta charset=\\"utf-8\\">
+        <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0\\">
+        <style>
+          * { margin: 0; padding: 0; }
+          .one-liner { display:flex; flex-direction:column; }
+          .card-frame { border:solid 1px #545AFA; border-radius:8px; width: calc(100% - 2px); height: 48px; padding-vertical: 16px; line-height: 24px; }
+        </style>
+      </head>
+      <body>          
+        <form id=\\"payment-form\\" method=\\"POST\\" action=\\"#\\">
+          <div class=\\"one-liner\\">
+            <div class=\\"card-frame\\"></div>
+            <input type=\\"submit\\" id=\\"pay-button\\" hidden />
+          </div>
+        </form>
+        <script>
+          const frameEvents = [
+            'CARD_TOKENIZATION_FAILED',
+            'CARD_TOKENIZED',
+            'CARD_VALIDATION_CHANGED',
+            'FRAME_ACTIVATED',
+            'FRAME_BLUR',
+            'FRAME_FOCUS',
+            'FRAME_VALIDATION_CHANGED',
+            'PAYMENT_METHOD_CHANGED',
+            'READY',
+          ];
+          var payButton = document.getElementById(\\"pay-button\\");
+          var form = document.getElementById(\\"payment-form\\");
+          Frames.init({\\"publicKey\\":\\"pk_test_6e40a700-d563-43cd-89d0-f9bb17d35e73\\",\\"debug\\":true,\\"style\\":{\\"base\\":{\\"fontSize\\":\\"17px\\"}},\\"localization\\":{\\"cardNumberPlaceholder\\":\\"Card number\\",\\"expiryMonthPlaceholder\\":\\"MM\\",\\"expiryYearPlaceholder\\":\\"YY\\",\\"cvvPlaceholder\\":\\"CVV\\"}});
+          frameEvents.forEach((event) => {
+            Frames.addEventHandler(
+              Frames.Events[event],
+              function (frameEvent) {
+                window.ReactNativeWebView.postMessage(JSON.stringify({ event: Frames.Events[event], data: frameEvent }));
+              }
+            );
+          });
+          form.addEventListener(\\"submit\\", function (event) {
+            event.preventDefault();
+            Frames.submitCard();
+          });
+        </script>
+      </body>
+    </html>",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "backgroundColor": "red",
+            "opacity": 0.99,
+          },
+        ]
+      }
+      useSharedProcessPool={true}
+    />
+  </View>
+</View>
+`;
